@@ -1,0 +1,86 @@
+/* הגדרות כלליות */
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* גריד הכפתורים - 5 בשורה */
+.BoxuiGrid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px auto;
+}
+
+/* עיצוב כרטיס גיל עם מסגרת כחולה */
+.age-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(20% - 15px); /* בדיוק 5 בשורה */
+    min-width: 130px;
+    padding: 15px 5px;
+    border: 2px solid #326b9a;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    background: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.age-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.age-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    object-fit: cover;
+}
+
+.age-card span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* כפתור הנעה לפעולה ירוק */
+.cta-button {
+    background-color: #7ac143;
+    color: white;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 22px;
+    display: inline-block;
+    box-shadow: 0 4px 0 #5e9a30;
+}
+
+.cta-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #5e9a30;
+}
+
+/* התאמה לטלפון - 2 בשורה */
+@media (max-width: 768px) {
+    .age-card {
+        width: calc(50% - 12px);
+        min-width: 140px;
+    }
+    
+    h1 {
+        font-size: 32px !important;
+    }
+}
